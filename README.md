@@ -4,4 +4,11 @@
 ## Pages
 - `index.js` : Contains the basics of JavaScript. It has variable declaration, data types, type  conversion, basic operations and operators in JavaScript.
 
+- `conditionals.js` : Here, we looked at the different ways of writing conditional statements using:
+    - if-else statements
+    - switch statements
+    - ternary operators
+
+- `exercises.js`: Contains pracitce questions for the things that we learn as we move forward.
+
 - Will update this as we move forward.
