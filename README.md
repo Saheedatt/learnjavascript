@@ -9,6 +9,13 @@
     - switch statements
     - ternary operators
 
+- `functions.js` : In this file, we looked at the diffrent ways to write functions: 
+    - Function declaration, 
+    - Function expression, 
+    - Arrow function, 
+    - Modern arrow function. 
+    We also learnt about callbacks, returning values and also learnt about naming functions appropriately. 
+
 - `exercises.js`: Contains pracitce questions for the things that we learn as we move forward.
 
 - Will update this as we move forward.
