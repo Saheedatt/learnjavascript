@@ -73,32 +73,79 @@ if (temperature > 36) {
 }
 
 let bodyTemp = 40;
-const advice = 
-bodyTemp > 36 ? 'You should see a doctor' : bodyTemp >=34 && bodyTemp <36 ? 'You are alright' : 'You should see a doctor immediately'
-
-console.log(advice)
+const advice =
+  bodyTemp > 36
+    ? "You should see a doctor"
+    : bodyTemp >= 34 && bodyTemp < 36
+    ? "You are alright"
+    : "You should see a doctor immediately";
+console.log(advice);
 4; //Create a switch statement to log a message based on the day of the week. For example, if the day is Monday, log "It's the start of the week."
 
 5; //Given a person's age, use a combination of if-else and switch statements to categorize them into groups like "Child," "Teenager," "Adult," or "Senior."
- let personAge = 7
- if (personAge >60){
+let personAge = 7;
+if (personAge > 60) {
   console.log("Senior");
- }else if (personAge> 18 && personAge< 60){
-  console.log('Adult')
- }else if(personAge <=18 && personAge > 12){
-  console.log("Teenager")
- }else{
-  console.log("Child")
- }
+} else if (personAge > 18 && personAge < 60) {
+  console.log("Adult");
+} else if (personAge <= 18 && personAge > 12) {
+  console.log("Teenager");
+} else {
+  console.log("Child");
+}
 6; //Write a function called greet that takes a name as a parameter and prints a greeting message. For example, calling greet("John") should print "Hello, John!"
-
+function greet(name) {
+  console.log(`Hello ${name}!`);
+}
+greet("John");
 7; //Write a function called calculateArea that takes the radius of a circle as a parameter and returns the area of the circle. Use the formula:
 // area = area=π×radius squared
+pi = 3.142;
+// radius = 10
+function calculateArea(radius) {
+  let easy = pi * radius ** 2;
+  console.log(easy);
+  // console.log(`Your area is ${easy}`);
+  console.log("The area is " + easy);
+  // console.log(`The multiplication value is  ${2*8}` )
+  // console.log(`The value now is ${5*6+7}`)
+
+  return easy;
+}
+calculateArea(7);
+
+function calculateArea2(radius) {
+  let area2 = Math.PI * radius ** 2;
+  return area2;
+}
+let results = calculateArea2(3);
+console.log(results);
+
+console.log(calculateArea(2));
 
 8; //Write a function called isEven that takes a number as a parameter and returns true if the number is even and false if it's odd.
+function isEven(num) {
+  return num % 2 === 0;
+}
+
+console.log(isEven(9));
+console.log(isEven(10));
 
 9; //Write a function called concatenateStrings that takes two strings as parameters and returns the concatenated string.
 
+function concatenateStrings(string1, string2) {
+  return string1 + " " + string2;
+}
+
+let stringed = concatenateStrings("Hello", "world");
+console.log(stringed);
+
+
+function joinStrings(string1, string2){
+  return `${string1} ${string2}`
+}
+let strings = concatenateStrings("I am a", "real lover");
+console.log(strings)
 10; // Write a function called celsiusToFahrenheit that takes a temperature in Celsius as a parameter and returns the equivalent temperature in Fahrenheit. Use the formula:  F= 9/5C + 32
 
 11; //Write a function called isPositive that takes a number as a parameter and returns true if the number is positive and false if it's zero or negative.
