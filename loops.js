@@ -52,7 +52,7 @@ for (let i = 0; i<3; i++){
   console.log(i)
 }
 /*The loop can be broken down into 4 parts:
-begin => i = 0; Executes once upo entering the loop
+begin => i = 0; Executes once upon entering the loop
 condition => i<3; Checked before every loop iteration. If false, the loop stops.
 body => console.log(i) Runs again and again while the condition is truthy.
 step -> i++ => Executes after the body on each iteration but before the condition check.
@@ -64,7 +64,7 @@ Run begin
 For loop is used to code a certain number of times. A counter must also be included here too.*/
 
 //Nested loops: A loop inside another loop is called a nested loop. The inner loop will be executed one time for each iteration of the outer loop.
-for(let m = 1; m<=7; i=m++){ //outer loop
+for(let m = 1; m<=7; m++){ //outer loop
   for(let l=1; l<=7;  l++){ //inner loop
     //body 
     console.log("Week " + m + " day " + l + " of the year")
@@ -110,4 +110,46 @@ for (let i = 0; i < 5; i++) {
     break; // exit the loop when i is 4
   }
   console.log(i);
+}
+
+
+//Using break and continue with while loop
+let d = 0;
+while (d < 15) {
+  if (d === 8) {
+    d++;
+    continue;
+  }
+  console.log("Counting... ", d);
+  d++;
+}
+/*
+let e = 0
+while (e <6 ) {
+    if (e === 3) {
+        continue;
+    }
+    console.log("Cog...", e);
+    e++;
+}
+*/
+let f = 0;
+while (f < 5) {
+  if (f === 3) {
+    break;
+  }
+  console.log("broen ", f);
+  f++;
+}
+let z = 2;
+while (z < 10) {
+  if (z === 3) {
+    z++;
+    continue;
+  }
+  if (z === 8) {
+    break;
+  }
+  console.log("Is broken ", z);
+  z++;
 }
