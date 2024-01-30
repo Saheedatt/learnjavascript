@@ -14,8 +14,14 @@
     - Function expression, 
     - Arrow function, 
     - Modern arrow function. 
-    We also learnt about callbacks, returning values and also learnt about naming functions appropriately. 
+We also learnt about callbacks, returning values and also learnt about naming functions appropriately. 
+
+- `loops.js` : We looked at the types of loops and their syntax:
+    - while loops
+    - do-while loops
+    - for loops
+We took a quick look at Nested loops. We also looked at the use at the use of break and continue.
 
 - `exercises.js`: Contains pracitce questions for the things that we learn as we move forward.
-
+    
 - Will update this as we move forward.
