@@ -222,8 +222,61 @@ console.log(isValidPassword("hellworld"));
 14; //Write a function called isNumberBetween that takes three parameters: a number, a lower limit, and an upper limit. The function should return true if the number is between the lower and upper limits (inclusive) and false otherwise.
 
 15. //Use a loop to print numbers from 1 to 20.
+let num3 = 1;
+while(num3 <= 20){
+  console.log(num3)
+  num3++
+}
+
+for(let num4 = 1; num4 <=20; num4++){
+  console.log(num4);
+}
 16. //Use a loop to print all even numbers from 1 to 20.
+for (let num4 = 1; num4 <= 20; num4++) {
+  if (num4 % 2 === 0) {
+    console.log(num4);
+  }
+}
 17. //Write a program that prints the numbers from 1 to 50. But for multiples of three, print "Fizz" instead of the number, and for the multiples of five, print "Buzz". For numbers that are multiples of both three and five, print "FizzBuzz".
+for (let x = 1; x <= 50; x++) {
+  if (x % 3 === 0 && x % 5 === 0) {
+      console.log("FizzBuzz");
+  } else if (x % 3 === 0) {
+      console.log("Fizz");
+  } else if (x % 5 === 0) {
+      console.log("Buzz");
+  } else {
+      console.log(x);
+  }
+}
+/*In the above code, the order of the conditions was necessary to check. 
+if (x % 3 === 0 && x % 5 === 0)  ensures that the code runs and checks for values that are both multiples of 3 and multiples of 5 before checking for those that are multiples of 3 and then those that are multiples of 5;
+
+for(let x = 1; x <=50; x++){
+    if(x % 3 === 0){
+        console.log("Fizz");
+    }else if(x % 5 === 0){
+        console.log("Buzz")
+    }else if(x % 3 ===0 && x % 5 ===0){
+    console.log("FizzBuzz")
+    }else{
+        console.log(x)
+    }
+}
+The above code has a logical error because the code first checks for multiples of 3 and then checks for multiples of 5. This would have satisfied all the conditions and it wont end up checking for numbers that are both multiples of 5 and multiples of 3 becuase they would already have been worked on and given Fizz or buzz.
+
+multiples of 3 simply means that when you divide by 3, you get 0 as a remainder
+multiples of 5 simply means that when you divide by 5, you get 0 as a remainder
+
+so our code is checking the condtions like this:
+a. x = 1: our starter, x<=0: we want our code to loop from one to 50, x++: increment by 1 as you go
+b. if x divided by 3 remains 0 and x  divided by 5 remains 0(remember our logical operators), print "FizzBuzz"
+c. now, with the remaining number between 1 and 50, if x is divisible by 3 to remian 0, print Fizz
+d. and with the rest of the numbers, if x is divisible by 5 to remain 0, print Buzz
+e. console.log(x) simply means it should now print the remaining numbers that didnt satisfy any of our given conditions.
+*/
+
+
 18. //Write a function that takes a number as an argument and returns the sum of the squares of all numbers from 1 to that number.
 19. //Write a function that takes a number as input and returns the sum of its digits using a loop.
 20. //
