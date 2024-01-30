@@ -220,3 +220,10 @@ function isValidPassword(password){
 console.log(isValidPassword("HelloWorld"));
 console.log(isValidPassword("hellworld"));
 14; //Write a function called isNumberBetween that takes three parameters: a number, a lower limit, and an upper limit. The function should return true if the number is between the lower and upper limits (inclusive) and false otherwise.
+
+15. //Use a loop to print numbers from 1 to 20.
+16. //Use a loop to print all even numbers from 1 to 20.
+17. //Write a program that prints the numbers from 1 to 50. But for multiples of three, print "Fizz" instead of the number, and for the multiples of five, print "Buzz". For numbers that are multiples of both three and five, print "FizzBuzz".
+18. //Write a function that takes a number as an argument and returns the sum of the squares of all numbers from 1 to that number.
+19. //Write a function that takes a number as input and returns the sum of its digits using a loop.
+20. //
