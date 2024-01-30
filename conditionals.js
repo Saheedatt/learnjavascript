@@ -118,7 +118,7 @@ let message1 =
     : login == ""
     ? "No login"
     : ""; 
-console.log(message);
+console.log(message1);
 
 //rewriting the above ternary as an if-else statemnt:
 
