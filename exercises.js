@@ -81,7 +81,26 @@ const advice =
     : "You should see a doctor immediately";
 console.log(advice);
 4; //Create a switch statement to log a message based on the day of the week. For example, if the day is Monday, log "It's the start of the week."
-
+let day = "Saturday";
+let tell;
+switch (day) {
+  case (day = "Monday"):
+    tell = "It's the start of the week";
+    break;
+  case (day = "Tuesday"):
+  case (day = "Wednesday"):
+  case (day = "Thursday"):
+  case (day = "Friday"):
+    tell = "It's a weekday";
+    break;
+  case (day = "Saturday"):
+  case (day = "Sunday"):
+    tell = "It's the weekend!!!";
+    break;
+  default:
+    tell = "It's an invalid day";
+}
+console.log(tell);
 5; //Given a person's age, use a combination of if-else and switch statements to categorize them into groups like "Child," "Teenager," "Adult," or "Senior."
 let personAge = 7;
 if (personAge > 60) {
@@ -140,18 +159,64 @@ function concatenateStrings(string1, string2) {
 let stringed = concatenateStrings("Hello", "world");
 console.log(stringed);
 
-
-function joinStrings(string1, string2){
-  return `${string1} ${string2}`
+function joinStrings(string1, string2) {
+  return `${string1} ${string2}`;
 }
 let strings = concatenateStrings("I am a", "real lover");
-console.log(strings)
+console.log(strings);
 10; // Write a function called celsiusToFahrenheit that takes a temperature in Celsius as a parameter and returns the equivalent temperature in Fahrenheit. Use the formula:  F= 9/5C + 32
+let degreeCelsius = 27;
+
+function celsiusToFahrenheit(degreeCelsius) {
+  let degreeFarenheit = (9 / 5) * degreeCelsius + 32;
+  return degreeFarenheit;
+}
+let degreeFarenheit = celsiusToFahrenheit(degreeCelsius);
+console.log(`The temperature today is ${degreeFarenheit}F`);
+console.log(`The temperature today is ${celsiusToFahrenheit(degreeCelsius)}F`);
+
+let degreeCelsius2;
+function celsiusToFahrenheit(degreeCelsius2) {
+  let degreeFarenheit = (9 / 5) * degreeCelsius2 + 32;
+  return degreeFarenheit;
+}
+let degreeFarenheit2 = celsiusToFahrenheit(30);
+console.log(`The temperature today is ${degreeFarenheit2}F`);
 
 11; //Write a function called isPositive that takes a number as a parameter and returns true if the number is positive and false if it's zero or negative.
+let num2;
+function isPositive(num2) {
+  return num2 > 0;
+}
+console.log(isPositive(0));
 
 12; //Write a function called calculate that takes two numbers and an operator as parameters. The function should perform the specified arithmetic operation (addition, subtraction, multiplication, or division) and return the result.
+function calculate(a, b, operator) {
+  switch (operator) {
+    case "+":
+      return a + b;
+    //break; because return immediately exits the function, a break statement is not necessary
+    case "-":
+      return a - b;
+    case "*":
+      return a * b;
+    case "/":
+      if (b === 0) {
+        return "Cannot divide by zero";
+      }
+      return a / b;
+    default:
+      return "Invalid operator";
+  }
+}
+let operationValue = calculate(5, 0, "*");
+console.log(operationValue);
+
 
 13; //Write a function called isValidPassword that takes a password as a parameter. The function should return true if the password is at least 8 characters long and contains both uppercase and lowercase letters, and false otherwise.
-
+function isValidPassword(password){
+  return password.length >= 8 && password.toUpperCase() !== password && password.toLowerCase() !== password;
+}
+console.log(isValidPassword("HelloWorld"));
+console.log(isValidPassword("hellworld"));
 14; //Write a function called isNumberBetween that takes three parameters: a number, a lower limit, and an upper limit. The function should return true if the number is between the lower and upper limits (inclusive) and false otherwise.
