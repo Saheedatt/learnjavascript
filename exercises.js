@@ -212,41 +212,44 @@ function calculate(a, b, operator) {
 let operationValue = calculate(5, 0, "*");
 console.log(operationValue);
 
-
 13; //Write a function called isValidPassword that takes a password as a parameter. The function should return true if the password is at least 8 characters long and contains both uppercase and lowercase letters, and false otherwise.
-function isValidPassword(password){
-  return password.length >= 8 && password.toUpperCase() !== password && password.toLowerCase() !== password;
+function isValidPassword(password) {
+  return (
+    password.length >= 8 &&
+    password.toUpperCase() !== password &&
+    password.toLowerCase() !== password
+  );
 }
 console.log(isValidPassword("HelloWorld"));
 console.log(isValidPassword("hellworld"));
 14; //Write a function called isNumberBetween that takes three parameters: a number, a lower limit, and an upper limit. The function should return true if the number is between the lower and upper limits (inclusive) and false otherwise.
 
-15. //Use a loop to print numbers from 1 to 20.
+15; //Use a loop to print numbers from 1 to 20.
 let num3 = 1;
-while(num3 <= 20){
-  console.log(num3)
-  num3++
+while (num3 <= 20) {
+  console.log(num3);
+  num3++;
 }
 
-for(let num4 = 1; num4 <=20; num4++){
+for (let num4 = 1; num4 <= 20; num4++) {
   console.log(num4);
 }
-16. //Use a loop to print all even numbers from 1 to 20.
+16; //Use a loop to print all even numbers from 1 to 20.
 for (let num4 = 1; num4 <= 20; num4++) {
   if (num4 % 2 === 0) {
     console.log(num4);
   }
 }
-17. //Write a program that prints the numbers from 1 to 50. But for multiples of three, print "Fizz" instead of the number, and for the multiples of five, print "Buzz". For numbers that are multiples of both three and five, print "FizzBuzz".
+17; //Write a program that prints the numbers from 1 to 50. But for multiples of three, print "Fizz" instead of the number, and for the multiples of five, print "Buzz". For numbers that are multiples of both three and five, print "FizzBuzz".
 for (let x = 1; x <= 50; x++) {
   if (x % 3 === 0 && x % 5 === 0) {
-      console.log("FizzBuzz");
+    console.log("FizzBuzz");
   } else if (x % 3 === 0) {
-      console.log("Fizz");
+    console.log("Fizz");
   } else if (x % 5 === 0) {
-      console.log("Buzz");
+    console.log("Buzz");
   } else {
-      console.log(x);
+    console.log(x);
   }
 }
 /*In the above code, the order of the conditions was necessary to check. 
@@ -276,7 +279,59 @@ d. and with the rest of the numbers, if x is divisible by 5 to remain 0, print B
 e. console.log(x) simply means it should now print the remaining numbers that didnt satisfy any of our given conditions.
 */
 
+18; //Write a function that takes a number as an argument and returns the sum of the squares of all numbers from 1 to that number.
+// let digit = 8;
+function squared(digit) {
+  let sum = 0; //initialization
 
-18. //Write a function that takes a number as an argument and returns the sum of the squares of all numbers from 1 to that number.
-19. //Write a function that takes a number as input and returns the sum of its digits using a loop.
-20. //
+  for (let i = 1; i <= digit; i++) {
+    sum += i ** 2;
+  }
+  return sum;
+}
+console.log(squared(5));
+
+//initialization of the sum stores the cumulative sum.
+//It them uses a for loo[ to iterate through the numberes from 1 to given digit , calculating the squareof each number and adding it to the `sum`. Finally, the function returns the computed sum
+
+19; //Write a function that takes a number as input and returns the sum of its digits using a loop.
+function givenDigit(digits) {
+  let sum2 = 0;
+  //initialization
+
+  //convert the number to a string to iterate through its digits
+  const number = digits.toString();
+  for (let i = 0; i < number.length; i++) {
+    //convert each digit back to a number and add it to the sum
+    sum2 += parseInt(number[i]);
+  }
+  return sum2;
+}
+console.log(givenDigit(2356));
+
+//We are converting the number to a string is done to facilitate the iteration through its digits. When you convert the number to a string, it becomes an iterable sequence of characters, and you can easily access each digit using array-like indexing.
+//When the number is a string, you can use array indexing (number[i]) to access individual digits
+// This makes it easy to convert each digit back to a number using parseInt() and add it to the sum.
+
+
+20; //Create an object called person with properties for name, age, and city, best food, colour.
+
+21; //Given the person object from the previous exercise, write code to access and print each property.
+
+22; //Change the age property of the person object to a new value and print the updated object.
+
+23; //Create an object called calculator with properties num1 and num2. Add a method named add that returns the sum of the two numbers.
+
+24;// Create an object with at least three properties. Use a for...in loop to iterate over the object and print each property and its value.
+
+25;//Create two objects with the same structure but different values. Write a function that compares the two objects and returns whether they are equal.
+
+26.// Create an array of objects, each representing a book with properties like title, author, and year. Loop through the array and print information about each book.
+
+27;//Create an object with nested properties. For example, an object representing a car with properties like make, model, and engine, where engine itself is an object with properties like type and horsepower.
+
+28; //Extend the calculator object from Exercise 4 by adding methods subtract and multiply that use the this keyword to perform the corresponding operations.
+
+
+//Leave this one for now.
+29;//Define a constructor function for creating Person objects with properties for name and age. Create multiple instances of the Person object using the constructor.
