@@ -313,25 +313,37 @@ console.log(givenDigit(2356));
 //When the number is a string, you can use array indexing (number[i]) to access individual digits
 // This makes it easy to convert each digit back to a number using parseInt() and add it to the sum.
 
-
 20; //Create an object called person with properties for name, age, and city, best food, colour.
+let person = {
+  name: "Saheedat",
+  age: 20,
+  city: "Lagos",
+  "best food": "Rice",
+  colour: "gray",
+};
 
 21; //Given the person object from the previous exercise, write code to access and print each property.
+console.log(person);
+
+for (let key in person) {
+  console.log(key);
+}
 
 22; //Change the age property of the person object to a new value and print the updated object.
+person.age = 24;
+console.log(person);
 
 23; //Create an object called calculator with properties num1 and num2. Add a method named add that returns the sum of the two numbers.
 
-24;// Create an object with at least three properties. Use a for...in loop to iterate over the object and print each property and its value.
+24; // Create an object with at least three properties. Use a for...in loop to iterate over the object and print each property and its value.
 
-25;//Create two objects with the same structure but different values. Write a function that compares the two objects and returns whether they are equal.
+25; //Create two objects with the same structure but different values. Write a function that compares the two objects and returns whether they are equal.
 
-26.// Create an array of objects, each representing a book with properties like title, author, and year. Loop through the array and print information about each book.
+26; // Create an array of objects, each representing a book with properties like title, author, and year. Loop through the array and print information about each book.
 
-27;//Create an object with nested properties. For example, an object representing a car with properties like make, model, and engine, where engine itself is an object with properties like type and horsepower.
+27; //Create an object with nested properties. For example, an object representing a car with properties like make, model, and engine, where engine itself is an object with properties like type and horsepower.
 
 28; //Extend the calculator object from Exercise 4 by adding methods subtract and multiply that use the this keyword to perform the corresponding operations.
 
-
 //Leave this one for now.
-29;//Define a constructor function for creating Person objects with properties for name and age. Create multiple instances of the Person object using the constructor.
+29; //Define a constructor function for creating Person objects with properties for name and age. Create multiple instances of the Person object using the constructor.
