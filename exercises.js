@@ -334,16 +334,90 @@ person.age = 24;
 console.log(person);
 
 23; //Create an object called calculator with properties num1 and num2. Add a method named add that returns the sum of the two numbers.
+const calculator = {
+  num1: 5,
+  num2: 3,
+  add: function () {
+    return this.num1 + this.num2;
+  },
+};
+console.log(calculator.add());
+/*this.num1: refers to the calculator object. It is simply saying calculator.num1.
+this.num2: similar to calculator.num2
+return this.num1 + this.num2;: This line returns the sum of the num1 and num2 properties of the calculator object.
+
+return this.num1 + this.num2;: This line returns the sum of the num1 and num2 properties of the calculator object.
+
+Using this inside a method allows the method to operate on the specific instance of the object it is called on. If you create multiple calculator objects, each with its own num1 and num2 properties, the add method will correctly operate on the properties of the specific calculator instance it is called on.  For example:*/
+const calculator1 = {
+  num1: 9,
+  num2: 3,
+  add: function () {
+    return this.num1 + this.num2;
+  },
+};
+
+const calculator2 = {
+  num1: 10,
+  num2: 7,
+  add: function () {
+    return this.num1 + this.num2;
+  },
+};
+
+console.log(calculator1.add());
+console.log(calculator2.add());
 
 24; // Create an object with at least three properties. Use a for...in loop to iterate over the object and print each property and its value.
-
+const school = {
+  name: "Luth",
+  founded: 1976,
+  city: "Lagos",
+};
+//Using for loop:
+for (let key in school) {
+  if (school.hasOwnProperty(key)) {
+    console.log(key + ":" + school[key]);
+  }
+}
 25; //Create two objects with the same structure but different values. Write a function that compares the two objects and returns whether they are equal.
+function equalObjects(obj1, obj2) {
+  const keys1 = Object.keys(obj1);
+  const keys2 = Object.keys(obj2);
 
-26; // Create an array of objects, each representing a book with properties like title, author, and year. Loop through the array and print information about each book.
+  //check if the number of properties is the same
+  if (keys1.length !== keys2.length) {
+    return false;
+  }
+  //iterate through the keys and compare values
+  for (let key in obj1) {
+    if (obj1[key] !== obj2[key]) {
+      return false;
+    }
+  }
+  //if all properties have matching values, the objects are equal, return true
+  return true;
+}
+const objA = { name: "John", age: 25, city: "New York" };
+const objB = { name: "Jane", age: 30, city: "Los Angeles" };
+const objC = { name: "John", age: 25, city: "New York" };
+console.log(equalObjects(objA, objB));
 
-27; //Create an object with nested properties. For example, an object representing a car with properties like make, model, and engine, where engine itself is an object with properties like type and horsepower.
+26; //Extend the calculator object from Exercise 4 by adding methods subtract and multiply that use the this keyword to perform the corresponding operations.
+const calculator3 = {
+  num1: 10,
+  num2: 7,
+  subtract: function () {
+    return this.num1 - this.num2;
+  },
+};
+const calculator4 = {
+  num1: 5,
+  num2: 4,
+  multiply: function () {
+    return this.num1 * this.num2;
+  },
+};
 
-28; //Extend the calculator object from Exercise 4 by adding methods subtract and multiply that use the this keyword to perform the corresponding operations.
-
-//Leave this one for now.
-29; //Define a constructor function for creating Person objects with properties for name and age. Create multiple instances of the Person object using the constructor.
+console.log(calculator3.subtract());
+console.log(calculator4.multiply());
