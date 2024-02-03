@@ -29,5 +29,10 @@
     - Comparing objects
     - The for...in loops
 
+- `Arrays`: This folder will contain everything that will be learnt about arrays. For now, it contains:
+    - `introArr.js`: The basics of arrays
+    - `arrayMethods.js`: The methods available to arrays
+    - 
+
     
 - Will update this as we move forward.
