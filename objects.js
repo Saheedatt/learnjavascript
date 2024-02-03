@@ -132,7 +132,7 @@ console.log(myObject14); //prints out {name: "Jake"}
 //};
 //myObject15 = {}; //error
 
-//An alternative approach to building objects is to first save an empty object literal to a variable, then use the dot notation to declare new properties on the fly and use the assignment iperator to add values to those properties.  e.g:
+//An alternative approach to building objects is to first save an empty object literal to a variable, then use the dot notation to declare new properties on the fly and use the assignment operator to add values to those properties.  e.g:
 let myObject16 = {};
 myObject16.rooms = 20;
 myObject16.color = blue;
