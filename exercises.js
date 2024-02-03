@@ -348,7 +348,7 @@ return this.num1 + this.num2;: This line returns the sum of the num1 and num2 pr
 
 return this.num1 + this.num2;: This line returns the sum of the num1 and num2 properties of the calculator object.
 
-Using this inside a method allows the method to operate on the specific instance of the object it is called on. If you create multiple calculator objects, each with its own num1 and num2 properties, the add method will correctly operate on the properties of the specific calculator instance it is called on.  For example:*/
+Using 'this' inside a method allows the method to operate on the specific instance of the object it is called on. If you create multiple calculator objects, each with its own num1 and num2 properties, the add method will correctly operate on the properties of the specific calculator instance it is called on.  For example:*/
 const calculator1 = {
   num1: 9,
   num2: 3,
@@ -405,19 +405,21 @@ console.log(equalObjects(objA, objB));
 
 26; //Extend the calculator object from Exercise 4 by adding methods subtract and multiply that use the this keyword to perform the corresponding operations.
 const calculator3 = {
-  num1: 10,
-  num2: 7,
-  subtract: function () {
-    return this.num1 - this.num2;
+  num1: 54,
+  num2: 22,
+  add: function () {
+    return this.num1 + this.num2;
+    //return calculator.num1 + calculator.num2;
   },
-};
-const calculator4 = {
-  num1: 5,
-  num2: 4,
   multiply: function () {
     return this.num1 * this.num2;
   },
+  subtract: function(){
+    return this.num1 - this.num2;
+  },
 };
 
+console.log(calculator3.add());  
+console.log(calculator3.multiply());
 console.log(calculator3.subtract());
-console.log(calculator4.multiply());
+
