@@ -66,4 +66,35 @@ console.log(array10);
 // arrayName.splice(arg1, arg2, item1...item2)
 //where: 
 //arg1 = mandatory argument. Starting position to add/remove items. You can use a negative value to specify theposition from the end of the array e.g -1 specifes the last element
-//arg2 = optional argument. Specifies the count of the element to be removed. If set to 0, no items will be removed.
+//arg2 = optional argument. Specifies the count of the element to be removed. If set to 0, no items will be removed. If not set, all elements from the start position to the end of the array will be removed
+
+
+//slice: Allows you to copy a portion of an array:
+//It's syntax is: arr.slice([start], [end])
+//It returns a new array copying to it all items from index start to end(not including the end). Both start and end can be negative, in that case position from array end is assumed
+//Example:
+let array11 = ["t", "e", "s", "t", "t", "e", "r", "s"];
+console.log(array11.slice(0, 4)); 
+
+//concat: Allows you to merge arrays. It creates a new array that includes values from other arrays and additional items:
+//It's syntax is: arr.concat(arg1, arg2...)
+//It accepts any number of srguents either arrays or values to concatenate to the resulting array
+//Example:
+let array12 = [1, 2];
+console.log(array12.concat([3, 4]));
+
+array12 = [3, 5, 7, 8];
+console.log(array.concat(array12))
+
+//loops: One of the oldest ways to cycle an array is the for loop over indexes:
+let array13 = ["Console", "reject", "resolve", "elevate"]
+for (let i = 0; i < array13.length; i++){
+  console.log(array13[i])
+} // fastest method
+
+//For arrays, there is another form of loops: for...of loops
+for (let a of array13){
+  console.log(a)
+} //modern syntax
+//The for...of loop doesn't give access to the number of the current element, just its value, but in most cases that's enough. This loop is shorter.
+//For...in loop can be used too because an array is an object but it is a bad idea
