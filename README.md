@@ -32,7 +32,26 @@
 - `Arrays`: This folder will contain everything that will be learnt about arrays. For now, it contains:
     - `introArr.js`: The basics of arrays
     - `arrayMethods.js`: The methods available to arrays
-    - 
+        - push/pop method
+        - shift/unshift method
+        - toString method
+        - splice/slice
+        - concat method
+    - `iterators.js`: Talks about array Iterators: The use of forEach loops compared to for loops and for...of loops.
+    - `searcharray.js`: Talks about the array methods that can be used to search through an array:
+        - IndexOf/lastIndexOf
+        - Includes
+        - find/findIndex
+        - filter
+    - `transforArray.js`: Talks about the array methods that can be used to transform an array.
+        - split method
+        - join method
+        - sort method
+        - reverse method
+        - reduce/reduceRight method
+        - map method
+
+    - `arrayexercises.js`: Contains practice exercises on the different available array methods.
 
     
 - Will update this as we move forward.
