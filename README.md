@@ -43,7 +43,7 @@
         - Includes
         - find/findIndex
         - filter
-    - `transforArray.js`: Talks about the array methods that can be used to transform an array.
+    - `transformArray.js`: Talks about the array methods that can be used to transform an array.
         - split method
         - join method
         - sort method
@@ -52,6 +52,18 @@
         - map method
 
     - `arrayexercises.js`: Contains practice exercises on the different available array methods.
+- `strings.js`: Contains the different methods that are available to strings.
+    - charAt(index)
+    - charCodeAt(index)
+    - concat method
+    - includes method
+    -indexOf(), lastIndexOf()
+    - length
+    - slice, substring()
+    - toUpperCase(), tolowerCase()
+    - trim()
+    - replace()
+    - split()
 
     
 - Will update this as we move forward.
