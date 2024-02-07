@@ -1,17 +1,18 @@
 //1. Use the map method to create a new array where each element is twice the corresponding element in the original array.
 const numbers = [1, 2, 3, 4, 5];
 let doubledNumbers = numbers.map((item) => item * 2);
+console.log(doubledNumbers);
 
 //2. Use the filter method to create a new array containing only the even numbers from the original array.
 const numbers1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 let evenNumbers = numbers1.filter((item) => item % 2 === 0);
-console.log(evenNumbers)
+console.log(evenNumbers);
 
 //3. Use the reduce method to calculate the sum of all numbers in the array.
 const numbers2 = [1, 12, 30, 44, 5];
 let reducedArray = numbers2.reduce((accumulator, currentValue) => {
-    return accumulator + currentValue;
-}, 0)
+  return accumulator + currentValue;
+}, 0);
 console.log(reducedArray);
 
 //4. Use the forEach method to log the square of each number in the array.
@@ -51,7 +52,7 @@ const fruits = ["apple", "banana", "cherry", "date", "fig"];
 fruits.splice(2, 2, "strawberry", "avocado"); //from index 2, remove 2 items and add the new items
 console.log(fruits);
 
-//8. Use the sort method to order the array alphabetically.
+//8. Use the sort method to order the array numerically.
 //  Use the sort method to sort the array of numbers in descending order.
 const numbers5 = [5, 2, 8, 1, 4];
 numbers5.sort((a, b) => a - b);
