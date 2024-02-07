@@ -50,6 +50,7 @@
         - reverse method
         - reduce/reduceRight method
         - map method
+    - `map-set.js`: Explains the use of maps and sets in javascript
 
     - `arrayexercises.js`: Contains practice exercises on the different available array methods.
 - `strings.js`: Contains the different methods that are available to strings.
@@ -57,7 +58,7 @@
     - charCodeAt(index)
     - concat method
     - includes method
-    -indexOf(), lastIndexOf()
+    - indexOf(), lastIndexOf()
     - length
     - slice, substring()
     - toUpperCase(), tolowerCase()
