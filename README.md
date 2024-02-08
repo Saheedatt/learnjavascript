@@ -22,7 +22,7 @@
     - for loops
 - We took a quick look at Nested loops. We also looked at the use at the use of break and continue.
 
-- `exercises.js`: Contains practice questions for the things that we learn as we move forward.
+- `exercises.js`: Contains practice questions for the things that we have learnt so far.
 
 - `objects.js`: We dealt with  basics of objects
     - The use of bracket and dot notation
@@ -65,6 +65,10 @@
     - trim()
     - replace()
     - split()
+
+- `dateTime`: This contains information on different ways of creating date and time in javascript
+
+- `exercises2.js`: Part 2 to our practice questions for the things that we have learnt. Currently contains Date and Time exercises.
 
     
 - Will update this as we move forward.
