@@ -50,7 +50,7 @@
         - reverse method
         - reduce/reduceRight method
         - map method
-    - `map-set.js`: Explains the use of maps and sets in javascript
+    - `map-set.js`: Explains the use of maps and sets in JavaScript
 
     - `arrayexercises.js`: Contains practice exercises on the different available array methods.
 - `strings.js`: Contains the different methods that are available to strings.
@@ -66,9 +66,10 @@
     - replace()
     - split()
 
-- `dateTime`: This contains information on different ways of creating date and time in javascript
+- `dateTime`: This contains information on different ways of creating date and time in JavaScript
 
 - `exercises2.js`: Part 2 to our practice questions for the things that we have learnt. Currently contains Date and Time exercises.
 
-    
+- `promises.js`: An introduction to promises and asynchronous activities in JavaScript.
+
 - Will update this as we move forward.
