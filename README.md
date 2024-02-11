@@ -70,6 +70,11 @@
 
 - `exercises2.js`: Part 2 to our practice questions for the things that we have learnt. Currently contains Date and Time exercises.
 
-- `promises.js`: An introduction to promises and asynchronous activities in JavaScript.
+- `promises`: An introduction to promises and asynchronous activities in JavaScript. Contains information on:
+    - Promises
+    - chaining promises
+    - async/await
+    - promise.all
+    - catching errors and using promises.
 
 - Will update this as we move forward.
