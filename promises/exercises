@@ -1,0 +1,122 @@
+//1. Create a simple promise that resolves after a delay of 2 seconds, and logs "Promise resolved" to the console when resolved.
+const delayedPromise = new Promise((resolve) => {
+  setTimeout(() => {
+    console.log("Promise resolved");
+    resolve();
+  }, 2000);
+});
+// Using the promise
+delayedPromise.then(() => {
+  console.log("After promise resolution");
+});
+
+//Using async/await:
+const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+const delayPromise = async () => {
+  await delay(2000);
+  console.log("Promise resolved!");
+};
+//using the async function
+delayPromise().then(() => {
+  console.log("I am using the promise");
+});
+
+//2. Create a simple promise that rejects after a delay of 2 seconds, and logs "Promise rejected" to the console when rejected.
+// const rejected = new Promise((resolve, reject)=>{
+//   setTimeout(() => {
+//     console.log("Promise rejected");
+//     reject();
+//   }, 2000);
+// })
+//This above code prints out the whole error message.
+
+const rejectPromise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    console.log("Promise rejected");
+    reject(new Error("This promise is rejected"));
+  }, 2000);
+});
+
+// Using the promise
+rejectPromise.catch((error) => {
+  console.error("Error detected:", error.message);
+});
+
+//3. Create a promise that takes two parameters (a and b) and resolves with their sum after a delay of 1 second.
+const sumPromise = (a, b) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const sum = a + b;
+      resolve(sum);
+    }, 1000);
+  });
+};
+//Remeber to use the promise
+sumPromise(4, 7).then((result) => {
+  console.log("Sum is ", result);
+});
+
+//4. Create two promises that resolve after different delays. Chain them so that the second one starts when the first one is resolved, and log their results to the console.
+const promise1 = new Promise((resolve) => {
+  setTimeout(() => {
+    resolve("Promise 1 resolved");
+  }, 2000);
+});
+const promise2 = new Promise((resolve) => {
+  setTimeout(() => {
+    resolve("Promise 2 resolved");
+  }, 3000);
+});
+promise1
+  .then((result) => {
+    console.log(result);
+    return promise2;
+  })
+  .then((result) => {
+    console.log(result);
+  });
+
+//Alternative approach:
+
+// const delayPromise1 = (value, delay) => {
+//     return new Promise((resolve) => {
+//       setTimeout(() => {
+//         console.log(`${value} resolved after ${delay} milliseconds`);
+//         resolve(value);
+//       }, delay);
+//     });
+//   };
+
+//   // Creating two promises with different delays
+//   const promise3 = delayPromise1("Promise 1", 2000);
+//   const promise4 = delayPromise1("Promise 2", 1000);
+
+//   // Chaining the promises
+//   promise1
+//     .then((result1) => {
+//       // This block executes when promise1 is resolved
+//       return promise3; // Returning promise2 to chain them
+//     })
+//     .then((result2) => {
+//       // This block executes when promise2 is resolved
+//       console.log("Both promises resolved:", result2);
+//     })
+//     .catch((error) => {
+//       console.error("An error occurred:", error);
+//     });
+
+//5. Create a promise that rejects after a delay of 3 seconds with an error message. Handle the rejection and log the error to the console.
+const rejectAfterDelay = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    reject("Promise rejected after 3 seconds");
+  }, 3000);
+});
+rejectAfterDelay.catch((error) => {
+  console.error("Error detected:", error);
+});
+//6. Create three promises that resolve with different delays. Use Promise.all to execute them concurrently and log an array of results to the console.
+//7. Create an asynchronous function delayedGreeting that logs "Hello, Async/await!" to the console after a delay of 2 seconds.
+//8. Create an asynchronous function , sumAsync that takes two parameters (a and b) and returns their sum after a delay of 1 second.
+//9. Modify the previous exercise to handle errors. If either parameter is less than 0, the function should reject with an error message.
+//10. Create an asynchronous function fetchUserData that simulates fetching user data from an API. Use await to simulate asynchronous calls to two different endpoints and log the results to the console.
+//11. Create an asynchronous function processTasks that processes three tasks sequentially. Each task should log a message with a delay of 1 second.
