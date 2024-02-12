@@ -76,5 +76,7 @@
     - async/await
     - promise.all
     - catching errors and using promises.
+- `prototypes`: We look at protypes and constructors.
+    - `prototypes.js`: We look at [[Prototype]] and it's significance to JavaScript.
 
 - Will update this as we move forward.
