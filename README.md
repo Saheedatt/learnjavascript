@@ -76,7 +76,17 @@
     - async/await
     - promise.all
     - catching errors and using promises.
+    - `exercises`: Contains practice exercises on Promises.
+
 - `prototypes`: We look at protypes and constructors.
     - `prototypes.js`: We look at [[Prototype]] and it's significance to JavaScript.
+    - `classes.js` & `classes2.js`:Explains classes and constructors
+    - -`fPrototypes.js`: A quick look at F prototype.
+    - `nativePrototype.js`: Explains the native prototypes in Javascript
+
+- `advancedFunctions`: A bigger look at functions.
+    - `recursion.js`: Explains recursion and it's uses. A quick look at stacks, binary tree and linked lists.
+    - `rest.js`: Rest parameters, arguments variable and spread operators.
+    - `exercises.js`: Exercises on Advanced functions.
 
 - Will update this as we move forward.
