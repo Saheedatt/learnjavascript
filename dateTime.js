@@ -1,4 +1,4 @@
-//It stores the dzte, time and provides methods for date and management. We can use it to store creayion/modification times, to measure time, or just to print out the current date.
+//It stores the date, time and provides methods for date and time management. We can use it to store creation/modification times, to measure time, or just to print out the current date.
 //Creation
 //To create a new Date object call new Date() with one of the following argument:
 const currentDate = new Date();
@@ -9,7 +9,8 @@ console.log(currentDate);
 const specificDate = new Date(2024, 1, 8, 12, 30, 0, 0); // (year, month, day, hour, minute, second, millisecond)
 console.log(specificDate);
 
-//Another way is to create a date by parsing a date string: The string format follows ISO 8601 standards.
+//Another way is to create a date by parsing a date string: The string format follows ISO 8601 standards. It ensures that the format of your date is YYYY-MM-DDTHH:mm:ss.sssZ
+
 const dateString = "2024-02-08T12:30:00.000Z";
 const parsedDate = new Date(dateString);
 console.log(parsedDate);
@@ -39,19 +40,13 @@ console.log(`Epoch time: ${epochTime}`);
 //Show how to perform basic arithmetic with dates, like adding or subtracting days:
 const today = new Date();
 const tomorrow = new Date(today);
-tomorrow.setDate(today.getDate() + 1);
+tomorrow.setDate(today.getDate() + 1); //setDate() is used to set the day of the month for a specified date according to local time.
 console.log(`Tomorrow is ${tomorrow}`);
 
 //Formatting Dates:
 //Explain how to format dates using libraries or by manually constructing strings using getMonth(), getDate(), etc. Alternatively, use libraries like Intl.DateTimeFormat for more sophisticated formatting.
 const formattedDate = new Intl.DateTimeFormat("en-US").format(currentDate);
 console.log(`Formatted date: ${formattedDate}`);
-
-// Parsing Dates:
-//Teach how to parse strings into Date objects using the Date.parse() method or external libraries like moment.js
-const dateString2 = "2024-02-08T12:30:00.000Z";
-const parsedDate2 = new Date(Date.parse(dateString));
-console.log(parsedDate);
 
 //Handling Time Zones:
 //Briefly introduce the concept of time zones and how you can work with them using libraries like moment-timezone or the toLocaleString method.
@@ -75,3 +70,13 @@ const startTime = Date.now();
 const endTime = Date.now();
 const elapsedTime = endTime - startTime;
 console.log(`Operation took ${elapsedTime} milliseconds`);
+
+
+const startTime2 = Date.now();
+
+// Perform the operation to be benchmarked
+const date2 = new Date();
+const later = new Date(date2.getTime() + 1000 * 60 * 60 * 24);
+const endTime2 = later.getTime();
+const elapsedTime2 = endTime2 - startTime2;
+console.log(`Operation took ${elapsedTime2} milliseconds`); //Operation took 86400000 milliseconds
