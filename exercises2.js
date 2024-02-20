@@ -82,34 +82,44 @@ calculateDateTimeDifference(startDate1, endDate1);
 
 5; //Write a function that takes a date and a target timezone as parameters and prints the date in the specified timezone.
 function convertDateToTimeZone(inputDate, targetTimeZone) {
-    const options = { timeZone: targetTimeZone, month: 'long', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
-    const formattedDate = new Intl.DateTimeFormat('en-US', options).format(new Date(inputDate));
+  const options = {
+    timeZone: targetTimeZone,
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+    second: "numeric",
+  };
+  const formattedDate = new Intl.DateTimeFormat("en-US", options).format(
+    new Date(inputDate)
+  );
 
-    console.log(`Original Date: ${inputDate}`);
-    console.log(`Converted Date in ${targetTimeZone} Timezone: ${formattedDate}`);
+  console.log(`Original Date: ${inputDate}`);
+  console.log(`Converted Date in ${targetTimeZone} Timezone: ${formattedDate}`);
 }
 
-const originalDate = '2024-02-08T12:30:00.000Z'; // UTC Time
-const targetTimeZone = 'America/New_York';
+const originalDate = "2024-02-08T12:30:00.000Z"; // UTC Time
+const targetTimeZone = "America/New_York";
 
 convertDateToTimeZone(originalDate, targetTimeZone);
 
-
 6; //Create a function that lists all timezones using the Intl.DateTimeFormat().resolvedOptions().timeZone method.
 function listAllTimezones() {
-    const timezones = [];
+  const timezones = [];
 
-    // Iterate through all available locales
-    Intl.DateTimeFormat.supportedLocalesOf().forEach(locale => {
-        const options = { timeZone: 'UTC' }; // Using UTC to get the list of all timezones
-        const timezone = new Intl.DateTimeFormat(locale, options).resolvedOptions().timeZone;
+  // Iterate through all available locales
+  Intl.DateTimeFormat.supportedLocalesOf().forEach((locale) => {
+    const options = { timeZone: "UTC" }; // Using UTC to get the list of all timezones
+    const timezone = new Intl.DateTimeFormat(locale, options).resolvedOptions()
+      .timeZone;
 
-        if (!timezones.includes(timezone)) {
-            timezones.push(timezone);
-        }
-    });
+    if (!timezones.includes(timezone)) {
+      timezones.push(timezone);
+    }
+  });
 
-    return timezones;
+  return timezones;
 }
 
 const allTimezones = listAllTimezones();
@@ -117,6 +127,15 @@ console.log("All Timezones:");
 console.log(allTimezones);
 
 7; //Write a function that converts a given epoch time to a readable date.
+const now = new Date();
+const epochTime = now.getTime();
+console.log(`Epoch time: ${epochTime}`);
+
+function convertEpochToReadableDate(epochTime) {
+  const date = new Date(epochTime);
+  return date.toUTCString();
+}
+console.log(convertEpochToReadableDate(epochTime));
 
 8; //Create a function that calculates the time elapsed since a specific event (given in epoch time).
 
@@ -128,6 +147,28 @@ console.log(allTimezones);
 
 12; //Write a function that formats the current date and time in the user's preferred locale.
 
-1; // Create an array of objects, each representing a book with properties like title, author, and year. Loop through the array and print information about each book.
-2; //Create an object with nested properties. For example, an object representing a car with properties like make, model, and engine, where engine itself is an object with properties like type and horsepower.
-3; //Define a constructor function for creating Person objects with properties for name and age. Create multiple instances of the Person object using the constructor.
+13; // Create an array of objects, each representing a book with properties like title, author, and year. Loop through the array and print information about each book.
+let books = [
+  { title: "The silent patient", author: "Alex Michaelides", year: 2019 },
+  { title: "The Night Circus", author: "Erin Morgenstern", year: 2011 },
+  { title: "The Book Thief", author: "Markus Zusak", year: 2005 },
+  { title: "Pride and Prejudice", author: "Jane Austen", year: 1813 },
+];
+for (const book of books) {
+  console.log(`Title: ${book.title}`);
+}
+const selectedBook = books[1];
+console.log(
+  `Selected book: ${selectedBook.title} by ${selectedBook.author} (${selectedBook.year})`
+);
+14; //Create an object with nested properties. For example, an object representing a car with properties like make, model, and engine, where engine itself is an object with properties like type and horsepower.
+let car = {
+  make: "Toyota",
+  model: "Corolla",
+  engine: {
+    type: "V6",
+    horsepower: 200,
+  },
+};
+console.log(car.make);
+
