@@ -105,3 +105,20 @@ function testSampleProm(){
 }
 //calling the function to handle the promise
 testSampleProm()
+
+
+//axios:
+//axios is an npm package that is used to make http requests. It is a promise based library that can be used in both the browser and node.js. It is a very popular library and is used by many developers to make http requests.
+const axios = require('axios');
+const url = 'https://jsonplaceholder.typicode.com/todos/1';
+
+//fetch
+//fetch is a built-in JavaScript function that is used to make http requests. It is a promise based function and is used to make http requests in the browser. It is not available in node.js. 
+fetch('https://api.github.com/users/saheedatt')
+.then(function(response){
+    return response.json()
+})
+.then(function(data){
+    console.log(data)
+})
+
