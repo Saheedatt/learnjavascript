@@ -1,0 +1,17 @@
+{
+  "name": "lab-js",
+  "version": "1.0.0",
+  "description": "Circle-75 is a learning circle at AltSchool Africa. We decided to come together as a group to learn JavaScript together and practice exercises in an attempt to all gain a better understanding of JavaScript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.7",
+    "cowsay": "^1.6.0"
+  }
+}
+
