@@ -1,0 +1,1 @@
+//Go to javascript.info.fetch for fetch documentation
