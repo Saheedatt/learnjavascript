@@ -87,6 +87,14 @@
 - `advancedFunctions`: A bigger look at functions.
     - `recursion.js`: Explains recursion and it's uses. A quick look at stacks, binary tree and linked lists.
     - `rest.js`: Rest parameters, arguments variable and spread operators.
+    - `binding.js`: Explains the concept of binding in JavaScript.
+    - `closure.js`
+    - `globalObject.js`
+    - `recursion.js`
+    - `scheduling.js`: Explains the two methods that we have for scheduling events in JavaScript: setTimeout and setInterval.
     - `exercises.js`: Exercises on Advanced functions.
+- `modules`: Introduces us to the concept of modules in JS and how they come in handy in the use of JavaScript frameworks. Files include: `index.js`, `index.mjs`, `math.js`, `math.mjs`and `module.js.`
+    `module.js`: Gives us a brief explanation on package installers and this is how we end up with `node_modules`, `package-lock.json` and `package.json` files
+
 
 - Will update this as we move forward.
