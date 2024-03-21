@@ -64,6 +64,8 @@ console.log(add1(3, 5));
 }*/
 
 //use yarn add jest --dev to install jest to enable testing using jest
+//yarn add --dev jest or
+//npm install --save-dev jest
 
 /* */
 // //Now to use jest in our code:
