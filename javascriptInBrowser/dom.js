@@ -1,5 +1,5 @@
 //The dom allows us to manipulate existing or write new html
-//To create a new projext, we are exploring the help of a bundler. Use npm install create vite
+//To create a new project, we are exploring the help of a bundler. Use npm install create vite
 //Instead of the usual straightforward method of just creating files and running on live-server, we are using vite because itimporves debugging, speed and it is modern.
 
 //pnpm is faster than npm...install it
@@ -23,7 +23,7 @@ The document object is the main entry-point" to the page. DOM has a tree-like st
 4. create a file called index.html
 5. create a file called main.js
 6. and any other file that you need
-7. run pnpm dev
+7. run pnpm run dev
 */
 
 
