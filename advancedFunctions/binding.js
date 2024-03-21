@@ -210,3 +210,28 @@ let str = 'mr man please end the class like this we are having headache'
 
 let res99 = surprisePackage(finalBustop, removeSpaces, addExclamation, toUpperCase)(str)
 res99
+
+//Call, apply and bind are methods that let you do extra things in JavaScript. They are used to set the value of this and to pass arguments to functions. They are often used in combination with higher-order functions and function composition to create more flexible and reusable code. Understanding these methods is essential for writing clean and maintainable code in JavaScript.
+function Person(name){
+  this.name = name;
+  console.log(this)
+}
+const temi = new Person('Temi')
+console.log(temi.name)
+
+//the 'this' is the object that was created by the constructor
+
+class PersonClaa{
+  constructor(name){
+    this.name = name;
+    console.log(this); //PersonClass{name: 'Temi'}
+  }
+}
+//personClass is the same as Person. Classes are converted to functions behind the scenes.
+
+function add(){
+  //anytime we do not have value for this in a function or object, the value will be the global window variable.
+  //globalThis - node || browser - window
+  console.log(this)
+}
+add.call({name: 'Temi'}); //{name: "Temi"}
