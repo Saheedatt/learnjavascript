@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .alert {
+        padding: 15px;
+        border: 1px solid #d6e9c6;
+        border-radius: 4px;
+        color: #3c763d;
+        background-color: #dff0d8;
+      }
+    </style>
+  </head>
+  <!-- <body something="non-standard" data-about="Orangutan"> -->
+    <body class="main page">
+    <p>A paragraph</p>
+    <div>A div</div>
+    <div id="elem">Hello <b>World</b></div>
+    <div id="news">
+      <h1>Headlines</h1>
+      <p>Martians attack!</p>
+    </div>
+    <div id="elem1" about="elephant"></div>
+    <div id="elem2"></div>
+
+    <div>Both divs below are hidden</div>
+    <div hidden>With the attribute "hidden"</div>
+    <div id="elem3">JavaScript assigned property "hidden"</div>
+
+    <div id="elem4">A blinking element</div>
+
+    <!--mark the div to show "name" here-->
+    <div show-info="name"></div>
+    <!-- and age here-->
+    <div show-info="age"></div>
+    <!-- <div id="elem5" data-about="Orangutan"></div> -->
+
+    <div class="alert">
+      <strong>Hi here!</strong>You have read an important message.
+    </div>
+    <ol id="ol">
+      <li>0</li>
+      <li>1</li>
+      <li>2</li>
+    </ol>
+
+    <ul id="ul"></ul>
+    <div id="div"></div>
+    <script src="index.js"></script>
+  </body>
+</html>
